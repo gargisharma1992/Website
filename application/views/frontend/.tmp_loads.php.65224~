@@ -1,0 +1,44 @@
+<?php echo $this->load->view('frontend/includes/header'); ?>
+	<div class="wrapper">
+		<div class="container">
+			<div class="col-md-6">
+				<div class="heading-sec">
+					<h1>Loads <i>Welcome to Flat Lab</i></h1>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                  <i class="fa fa-calendar-o icon-calendar icon-large"></i>
+                  <span></span> <b class="caret"></b>
+               </div>
+			</div>
+			
+			
+		<?php 
+foreach($css_files as $file): ?>
+	<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+<?php endforeach; ?>
+<?php foreach($js_files as $file): ?>
+	<script src="<?php echo $file; ?>"></script>
+<?php endforeach; ?>
+			
+			    <div>
+		<?php echo $output; ?>
+    </div>
+			
+			
+			
+			
+		</div><!-- Container -->
+	</div><!-- Wrapper -->
+	
+<!-- RAIn ANIMATED ICON-->
+<script>
+  var icons = new Skycons();
+  icons.set("rain", Skycons.RAIN);
+  icons.play();
+</script>
+
+
+</body>
+</html>
